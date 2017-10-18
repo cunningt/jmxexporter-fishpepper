@@ -7,7 +7,7 @@
   var userGroupMode = fp.blockOpts.userGroupMode;
 }}# Prometheus JMX exporter agent
  RUN mkdir -p {{= destPath }}/etc \
-  && curl {{= mavenRepo }}/io/prometheus/jmx/{{= jmxExporterArtifact}}/{{= jmxExporterVersion }}/{{= jmxExporterArtifact}}-{{= jmxExporterVersion }}.jar\
+  && curl {{= mavenRepo }}/io/prometheus/jmx/{{= jmxExporterArtifact}}/{{= jmxExporterVersion }}/{{= jmxExporterArtifact}}-{{= jmxExporterVersion }}.jar \
           -o /opt/prometheus/jmx_prometheus_javaagent.jar
  ADD prometheus-opts {{= destPath }}/prometheus-opts
  ADD prometheus-config.yml {{= destPath }}/prometheus-config.yml
